@@ -6,6 +6,8 @@ import 'package:app_components/screens/routing_screen.dart';
 import 'package:app_components/screens/sliders_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'infinity_scroll_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -60,9 +62,12 @@ class HomeScreen extends StatelessWidget {
               Navigator.pushNamed(context, SlidersScreen.routeName);
             },
           ),
-          const ListTile(
-            leading: Icon(Icons.screen_lock_landscape),
-            title: Text('Infinit Scroll'),
+          ListTile(
+            leading: const Icon(Icons.screen_lock_landscape),
+            title: const Text('Infinit Scroll'),
+            onTap: () {
+              Navigator.pushNamed(context, InfinityScrollScreen.routeName);
+            },
           ),
           const ListTile(
             leading: Icon(Icons.format_align_center),
