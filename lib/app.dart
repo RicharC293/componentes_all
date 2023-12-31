@@ -1,5 +1,6 @@
 import 'package:app_components/screens/alerts_screen.dart';
 import 'package:app_components/screens/cards_screen.dart';
+import 'package:app_components/screens/form_screen.dart';
 import 'package:app_components/screens/home_screen.dart';
 import 'package:app_components/screens/infinity_scroll_screen.dart';
 import 'package:app_components/screens/list_screen.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         SlidersScreen.routeName: (context) => const SlidersScreen(),
         InfinityScrollScreen.routeName: (context) =>
             const InfinityScrollScreen(),
+        FormScreen.routeName: (context) => const FormScreen(),
       },
     );
   }

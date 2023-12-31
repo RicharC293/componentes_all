@@ -34,6 +34,8 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
     setState(() {});
     final fetchImages =
         await Services.instance.getImages(_initialImage, _amount);
+    /// Si el widget no está montado, no se actualiza el estado PREVIENE ERROR
+    if(!mounted) return [];
     _images = [...?_images, ...fetchImages];
     _initialImage += _amount;
     _isLoading = false;

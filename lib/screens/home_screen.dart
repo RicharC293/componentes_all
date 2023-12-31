@@ -6,6 +6,7 @@ import 'package:app_components/screens/routing_screen.dart';
 import 'package:app_components/screens/sliders_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'form_screen.dart';
 import 'infinity_scroll_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -69,9 +70,12 @@ class HomeScreen extends StatelessWidget {
               Navigator.pushNamed(context, InfinityScrollScreen.routeName);
             },
           ),
-          const ListTile(
-            leading: Icon(Icons.format_align_center),
-            title: Text('Formularios'),
+          ListTile(
+            leading: const Icon(Icons.format_align_center),
+            title: const Text('Formularios'),
+            onTap: () {
+              Navigator.pushNamed(context, FormScreen.routeName);
+            },
           ),
         ],
       ),
